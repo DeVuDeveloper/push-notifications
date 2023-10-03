@@ -1,0 +1,26 @@
+ <% if @user.present? %>
+<div class="flex flex-col items-center text-center">
+  <h2 class="text-2xl font-bold my-4">Verify Your Email</h2>
+  <p>Enter the verification code sent to your email:</p>
+ 
+  <%= simple_form_for @user, url: verify_path, method: :put, data: { turbo: false } do |f| %>
+    <div class="flex gap-4 my-4" data-controller="verify">
+      <% 4.times do |i| %>
+        <%= f.text_field "pin_#{i}", maxlength: 1, autofocus: true, autocomplete: "off", label: false, placeholder: "", class: "w-12 h-12 border border-gray-300 text-2xl text-center code-input", 'data-verify-target': "codeInput" %>
+      <% end %>
+     
+    </div>
+  <% end %>
+
+  <p>Didn't receive the code?</p>
+  <%= simple_form_for @user, url: resend_verify_path, method: :post do |f| %>
+    <% if @user.errors.any? %>
+      <%= @user.errors.full_messages.to_sentence.capitalize %>
+    <% end %>
+    <div class="flex flex-col items-center text-center">
+      <%= f.submit "Resend code", class: "bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700" %>
+    </div>
+  <% end %>
+</div>
+ <% end %>
+

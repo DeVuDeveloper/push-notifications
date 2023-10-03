@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`it focuses on the next input field when a character is entered 1`] = `
+"<form data-controller="verify">
+      <input id="1" type="text" data-verify-target="codeInput">
+      <input id="2" type="text" data-verify-target="codeInput">
+      <input id="3" type="text" data-verify-target="codeInput">
+      <button type="submit">Submit</button>
+    </form>"
+`;

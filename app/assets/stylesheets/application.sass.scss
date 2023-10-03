@@ -1,0 +1,41 @@
+.flash__message {
+    font-size: 0.875rem;
+    animation: appear-then-fade 4s both;
+    border-radius: 999px;
+    margin-top: -10px;
+    margin-right: 100px;
+  }
+  
+  .flash__message-notice {
+    color: hsl(120, 96%, 53%);
+  }
+  
+  .flash__message-alert {
+    color: hsl(0, 96%, 53%);
+  }
+  
+  
+  @keyframes appear-then-fade {
+    0%, 100% {
+      opacity:0
+    }
+    5%, 60% {
+      opacity:1
+    }
+  }
+
+  .password-strength-meter {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  #password-strength {
+    width: 100%;
+  }
+  
+  #password-strength-label {
+    display: block;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+  }

@@ -1,0 +1,81 @@
+Bundler/OrderedGems:
+  Exclude:
+    - 'Gemfile'
+Layout/EmptyLineAfterGuardClause:
+  Exclude:
+    - 'bin/bundle'
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  Exclude:
+    - 'config/environments/production.rb'
+
+
+Layout/SpaceInsidePercentLiteralDelimiters:
+  Exclude:
+    - 'Gemfile'
+
+
+Metrics/AbcSize:
+  Max: 33
+
+Metrics/BlockLength:
+  Max: 51
+
+
+Metrics/CyclomaticComplexity:
+  Max: 9
+
+
+Metrics/MethodLength:
+  Max: 13
+
+
+Metrics/PerceivedComplexity:
+  Max: 9
+
+Naming/VariableNumber:
+  Exclude:
+    - 'app/controllers/verify_controller.rb'
+    - 'app/models/user.rb'
+    - 'spec/requests/verify_spec.rb'
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - 'test/channels/application_cable/connection_test.rb'
+    - 'test/test_helper.rb'
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+
+Style/GlobalStdStream:
+  Exclude:
+    - 'config/environments/production.rb'
+
+Style/IfUnlessModifier:
+  Exclude:
+    - 'bin/bundle'
+
+Style/PerlBackrefs:
+  Exclude:
+    - 'bin/bundle'
+
+Style/RedundantFetchBlock:
+  Exclude:
+    - 'config/puma.rb'
+
+Style/SpecialGlobalVars:
+  EnforcedStyle: use_perl_names
+
+Style/StringLiterals:
+  Enabled: false
+
+Style/SymbolArray:
+  EnforcedStyle: percent
+  MinSize: 10
+
+Layout/LineLength:
+  Max: 198

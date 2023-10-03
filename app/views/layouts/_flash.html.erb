@@ -1,0 +1,9 @@
+<% flash.each do |flash_type, message| %>
+  <div
+    class="flash__message flash__message-<%= flash_type %> bg-gray-800 text-white text-center fixed top-24 right-10 rounded-full transform translate-x-1/2 max-w-[100%] w-max p-4"
+    data-controller="removals"
+    data-action="animationend->removals#remove"
+  >
+    <%= message %>
+  </div>
+<% end %>

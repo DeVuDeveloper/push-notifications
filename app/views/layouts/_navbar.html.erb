@@ -1,0 +1,43 @@
+<nav class="bg-gray-900">
+  <div class="container mx-auto flex items-center justify-between">
+    <%= link_to(root_path, class: "text-white text-2xl font-bold") do %>
+     <h2 class="p-4">Email Verification</h2>
+    <% end %>
+    <%= form_tag("/s", method: "get", class: "flex items-center ml-4") do %>
+      <%= hidden_field_tag("utf8", "✓") %>
+      <%= hidden_field_tag("see_all", "true") %>
+      <div class="relative flex items-center">
+        <%= text_field_tag("q", nil, class: "w-96 bg-gray-100 text-white px-4 py-2 rounded-full focus:outline-none focus:ring focus:border-blue-300", placeholder: "Search", autocomplete: "off") %>
+        <div class="absolute right-0 top-0"> 
+          <button name="button" type="submit" class="bg-blue-500 text-white px-4 py-2 mb-4 m-0 rounded-full focus:outline-none hover:bg-blue-600">
+            <i class="fas fa-search"></i>
+          </button>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="flex items-center p-4">
+      
+      <% if user_signed_in? %>
+  
+        <%= button_to destroy_user_session_path, method: :delete, class: "text-white ml-4" do %>
+          <span class="px-4 py-2 border rounded-full border-white">
+            <i class="fas fa-sign-out-alt"></i> Logout
+          </span>
+        <% end %>
+      <% else %>
+        
+        <%= link_to("/account/login", class: "text-white ml-4") do %>
+          <span class="px-4 py-2 border rounded-full border-white">
+            <i class="fas fa-user"></i>
+            <span class="ml-2">Login</span>
+          </span>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</nav>
+
+
+
+
