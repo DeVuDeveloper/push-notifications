@@ -1,0 +1,23 @@
+<%= turbo_frame_tag user do %>
+  <li class="bg-gray-800 border-b border-gray-200 text-gray-400 flex items-center py-3 px-4">
+    <span class="w-1/4"><%= user.email %></span>
+     <span class="w-1/4 text-center pr-24"><%= user.id %></span>
+    <span class="w-1/4 text-center">
+      <% if user.admin? %>
+        <div>Admin</div>
+      <% end%>
+    </span>
+    <span class="w-1/4 flex justify-end space-x-2">
+      <a href="#" class="text-gray-400 hover:text-gray-100">
+        <i class="material-icons-outlined text-base">visibility</i>
+      </a>
+
+      <%= link_to edit_admin_user_path(user), class: "text-blue-500 hover:underline" do %>
+        <i class="material-icons-outlined text-base">edit</i>
+      <% end %>
+      <%= button_to admin_user_path(user), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-500 hover:underline" do %>
+        <i class="material-icons-outlined text-base">delete</i>
+      <% end %>
+    </span>
+  </li>
+<% end %>

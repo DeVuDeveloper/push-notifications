@@ -1,0 +1,16 @@
+<%= turbo_frame_tag @user do %>
+<div class="container mx-auto">
+
+  <%= simple_form_for(@user, url: admin_user_path(@user), method: :patch) do |form| %>
+    
+    <%= form.input :email, label: false, class: "border rounded py-2 px-3 w-full", placeholder: "Email" %>
+
+    <%= form.input :role, as: :select, collection: User.roles.keys.reject { |role| role == 'super_admin' },
+      label: false, class: "border text-white rounded py-2 px-3 w-full", prompt: "Select Role" %>
+
+    <%= form.submit "Update User", class: "mt-4 btn btn-size py-1 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" %>
+    <%= link_to "Cancel", admin_users_path, class: "mt-4 btn btn-size py-1 px-4 bg-red-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-800 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50" %>
+  <% end %>
+
+</div>
+<% end %>

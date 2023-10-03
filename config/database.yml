@@ -5,14 +5,14 @@ default: &default
 
 development:
   <<: *default
-  database: bazzar_development
+  database: push_development
 
 test:
   <<: *default
-  database: bazzar_test<%= ENV['TEST_ENV_NUMBER'] %>
+  database: push_test<%= ENV['TEST_ENV_NUMBER'] %>
 
 production:
   <<: *default
-  database: bazzar_production
-  username: bazzar
-  password: <%= ENV["BAZZAR_DATABASE_PASSWORD"] %>
+  database: push_production
+  username: push
+  password: <%= ENV["PUSH_DATABASE_PASSWORD"] %>
