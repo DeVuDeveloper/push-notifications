@@ -1,4 +1,4 @@
-# Web Push Notifications
+# Web Push Notifications in Ruby on Rails
 
 ![Push Notification 1](app/assets/images/screen1.png) | ![Push Notification 2](app/assets/images/screen2.png)
 :-------------------------:|:-------------------------:
