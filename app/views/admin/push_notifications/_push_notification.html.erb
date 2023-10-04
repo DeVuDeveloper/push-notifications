@@ -1,0 +1,17 @@
+<%= turbo_frame_tag push_notification do %>
+  <li class="bg-gray-800 border-b border-gray-200 text-gray-400 flex items-center py-3 px-4 pl-8">
+    <span class="w-1/4"><%= push_notification.id %></span>
+    <span class="w-1/4"><%= push_notification.created_at.strftime("%d.%m.%Y %H:%M:%S") %></span>
+    <span class="w-1/4"><%= push_notification.title %></span>
+    <span class="w-1/4 flex items-center justify-start space-x-4 pl-8">
+
+      <%= link_to admin_push_notification_path(push_notification), class: "text-green-500 hover:underline", data: { turbo_frame: "_top" } do %>
+        <i class="material-icons-outlined text-base">preview</i>
+      <% end %>
+      
+      <%= button_to admin_push_notification_path(id: push_notification.id), method: :delete, class: "text-red-500 hover:underline" do %>
+        <i class="material-icons-outlined text-base">delete</i>
+      <% end %>
+    </span>
+  </li>
+<% end %>

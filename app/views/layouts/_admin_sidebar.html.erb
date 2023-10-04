@@ -1,0 +1,19 @@
+ <nav aria-label="alternative nav">
+  <div class="fixed bottom-0 z-10 mt-12 h-20 w-full content-center bg-gray-800 shadow-xl md:relative md:h-screen md:w-48">
+    <div class="content-center justify-between text-left md:fixed md:left-0 md:top-0 md:mt-12 md:w-48 md:content-start">
+      <ul class="list-reset flex flex-row px-1 pt-3 text-center md:flex-col md:px-2 md:py-3 md:text-left">
+        <li class="mr-3 flex-1">
+          <%= active_link_to  admin_users_path, class: "block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-pink-500", active_class: "border-pink-400"  do %>
+            <i class="fa fa-users pr-0 md:pr-3"></i>
+            <span class="block pb-1 text-xs text-gray-400 md:inline-block md:pb-0 md:text-base md:text-gray-200">Users</span>
+          <% end %>
+          <li class="mr-3 flex-1">
+            <%= active_link_to  admin_push_notifications_path, class: "block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-blue-500", active_class: "border-blue-400" do %>
+              <i class="fas fa-sticky-note pr-0 md:pr-3"></i>
+              <span class="block pb-1 text-xs text-gray-400 md:inline-block md:pb-0 md:text-base md:text-gray-200"><%= t('global.admin_sidebar.push_notes') %></span>
+            <% end %>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>

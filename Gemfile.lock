@@ -104,6 +104,10 @@ GEM
       responders
       warden (~> 1.2.3)
     diff-lcs (1.5.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -135,6 +139,7 @@ GEM
       guard (~> 2.8)
       guard-compat (~> 1.0)
       multi_json (~> 1.8)
+    hkdf (1.0.0)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -148,6 +153,7 @@ GEM
     jsbundling-rails (1.1.2)
       railties (>= 6.0.0)
     json (2.6.3)
+    jwt (2.7.1)
     language_server-protocol (3.17.0.3)
     launchy (2.5.2)
       addressable (~> 2.8)
@@ -188,6 +194,7 @@ GEM
     notiffany (0.1.3)
       nenv (~> 0.1)
       shellany (~> 0.0)
+    openssl (3.2.0)
     orm_adapter (0.5.0)
     parallel (1.23.0)
     parallel_tests (4.2.2)
@@ -311,6 +318,8 @@ GEM
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2, < 3.0)
       websocket (~> 1.0)
+    serviceworker-rails (0.6.0)
+      railties (>= 3.1)
     shellany (0.0.1)
     simple_form (5.2.0)
       actionpack (>= 5.2)
@@ -340,6 +349,10 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    web-push (3.0.0)
+      hkdf (~> 1.0)
+      jwt (~> 2.0)
+      openssl (~> 3.0)
     webdrivers (5.3.1)
       nokogiri (~> 1.6)
       rubyzip (>= 1.3.0)
@@ -365,6 +378,7 @@ DEPENDENCIES
   cssbundling-rails
   debug
   devise
+  dotenv-rails
   factory_bot_rails
   faker
   guard
@@ -385,6 +399,7 @@ DEPENDENCIES
   rubocop-rspec
   ruby_audit
   selenium-webdriver
+  serviceworker-rails
   simple_form
   stimulus-rails
   tailwindcss-rails
@@ -392,6 +407,7 @@ DEPENDENCIES
   tzinfo-data
   view_component
   web-console
+  web-push
   webdrivers
   zxcvbn
   zxcvbn-ruby
