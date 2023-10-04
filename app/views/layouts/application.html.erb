@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Email Verification</title>
+    <title>Push Notification</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -10,15 +10,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/zxcvbn/4.4.2/zxcvbn.js"></script>
-
-
   </head>
-  <body>
-
-  <%= render "layouts/flash" %>
-
-
-    <%= render "layouts/navbar"%>
+  <body data-controller="push" data-application-server-key="<%= ENV['DEFAULT_APPLICATION_SERVER_KEY'] %>">
+    <%= render "layouts/flash" %>
+    <%= render partial: "layouts/navbar" %>
     <%= yield %>
   </body>
 </html>

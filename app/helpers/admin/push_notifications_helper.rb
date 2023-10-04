@@ -1,2 +1,4 @@
-module Admin::PushNotificationsHelper
+module Admin
+  module PushNotificationsHelper
+  end
 end

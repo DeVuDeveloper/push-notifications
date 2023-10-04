@@ -21,6 +21,8 @@ gem 'tailwindcss-rails'
 gem 'simple_form'
 gem 'zxcvbn'
 gem 'zxcvbn-ruby', require: 'zxcvbn'
+gem 'web-push'
+gem 'serviceworker-rails'
 
 group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
@@ -42,6 +44,7 @@ group :development do
   gem 'guard'
   gem 'guard-livereload', require: false
   gem 'letter_opener'
+  gem "dotenv-rails"
 end
 
 group :test do

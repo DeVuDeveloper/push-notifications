@@ -7,7 +7,6 @@ module ApplicationHelper
     end
   end
 
-
   def active_link_to(path, options = {}, &block)
     is_active = current_page?(path)
     active_class = is_active ? options[:active_class] : ""

@@ -7,7 +7,13 @@
             <i class="fa fa-users pr-0 md:pr-3"></i>
             <span class="block pb-1 text-xs text-gray-400 md:inline-block md:pb-0 md:text-base md:text-gray-200">Users</span>
           <% end %>
-      </ul>
+          <li class="mr-3 flex-1">
+            <%= active_link_to  admin_push_notifications_path, class: "block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-white border-b-2 border-gray-800 hover:border-blue-500", active_class: "border-blue-400" do %>
+              <i class="fas fa-sticky-note pr-0 md:pr-3"></i>
+              <span class="block pb-1 text-xs text-gray-400 md:inline-block md:pb-0 md:text-base md:text-gray-200"><%= t('global.admin_sidebar.push_notes') %></span>
+            <% end %>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>

@@ -9,7 +9,6 @@ class ApplicationController < ActionController::Base
     redirect_to verify_path, notice: "Please verify your email address"
   end
 
-
   protected
 
   def configure_permitted_parameters

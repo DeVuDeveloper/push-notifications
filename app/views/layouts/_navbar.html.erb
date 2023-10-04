@@ -15,7 +15,7 @@
         </div>
       </div>
     <% end %>
-    <% if  current_user.is_admin? %>
+    <% if user_signed_in? && current_user.admin? %>
      <%= link_to  "Admin", admin_users_path, class: "text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium", active_class: 'bg-gray-900'%>
     <% end %>
 

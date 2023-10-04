@@ -19,7 +19,7 @@ Metrics/AbcSize:
   Max: 33
 
 Metrics/BlockLength:
-  Max: 51
+  Max: 76
 
 
 Metrics/CyclomaticComplexity:

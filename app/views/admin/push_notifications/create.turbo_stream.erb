@@ -1,0 +1,3 @@
+<%= turbo_stream.prepend "push_notifications", @push_notification %>
+<%= turbo_stream.update PushNotification.new, "" %>
+<%= render_turbo_stream_flash_messages %>

@@ -7,5 +7,8 @@ import { application } from "./application"
 import PasswordController from "./password_controller"
 application.register("password", PasswordController)
 
+import PushController from "./push_controller"
+application.register("push", PushController)
+
 import VerifyController from "./verify_controller"
 application.register("verify", VerifyController)

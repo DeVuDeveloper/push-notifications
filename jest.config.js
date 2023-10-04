@@ -7,4 +7,8 @@ module.exports = {
     },
     testEnvironment: "jsdom",
     transformIgnorePatterns: ["node_modules"],
+    globals: {
+         TextEncoder: require("util").TextEncoder,
+         TextDecoder: require("util").TextDecoder
+     }
 };

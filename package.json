@@ -12,12 +12,14 @@
     "jest": "^29.6.4",
     "jest-environment-jsdom": "^29.7.0",
     "jsdom": "^22.1.0",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "text-encoding": "^0.7.0",
+    "util": "^0.12.5"
   },
   "scripts": {
     "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=/assets",
     "build:css": "sass ./app/assets/stylesheets/application.sass.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules",
-    "test": "jest"
+    "test": "jest --verbose --runInBand --detectOpenHandles --forceExit"
   },
   "version": "1.0.0",
   "description": "E-commerc",
