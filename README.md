@@ -18,6 +18,41 @@ Before implementing Web Push Notifications in your web application, make sure yo
 
 - **VAPID Keys**: Generate VAPID (Voluntary Application Server Identification) keys for secure communication with push service providers. You'll need these keys to establish a secure connection between your server and push service providers.
 
+   To generate VAPID keys, you can use a tool or library like `web-push`. After generating the keys, store them securely in your environment variables or Rails credentials. Here's how you can set them up:
+
+   - **Environment Variables**:
+
+     ```
+     DEFAULT_APPLICATION_SERVER_KEY=your_public_key_here
+     DEFAULT_EMAIL=your@email.com
+     DEFAULT_PRIVATE_KEY=your_private_key_here
+     ```
+
+   - **Rails Credentials**:
+
+     Store your VAPID keys securely using Rails credentials:
+
+     1. Open your Rails credentials file:
+
+        ```bash
+        rails credentials:edit
+        ```
+
+     2. Add the VAPID keys:
+
+        ```yaml
+        push_notifications:
+          vapid_public_key: your_public_key_here
+          vapid_email: your@email.com
+          vapid_private_key: your_private_key_here
+        ```
+
+     3. Save and close the credentials file.
+
+   Be sure to keep these keys confidential to maintain the security of your push notification system.
+
+
+
 ## Getting Started
 
 Clone this repository to your local development environment:
